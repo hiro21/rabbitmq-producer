@@ -1,13 +1,11 @@
 package com.course.rabbitmqproducer;
 
 import com.course.rabbitmqproducer.entity.Employee;
-import com.course.rabbitmqproducer.producer.EmployeeJsonProducer;
-import com.course.rabbitmqproducer.producer.HelloRabbitProducer;
+import com.course.rabbitmqproducer.producer.HumanResourceProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.scheduling.annotation.EnableScheduling;
 
 import java.time.LocalDate;
 
@@ -15,7 +13,7 @@ import java.time.LocalDate;
 public class RabbitmqProducerApplication implements CommandLineRunner {
 
 	@Autowired
-	private EmployeeJsonProducer employeeJsonProducer;
+    private HumanResourceProducer employeeJsonProducer;
 
 	public static void main(String[] args) {
 		SpringApplication.run(RabbitmqProducerApplication.class, args);
